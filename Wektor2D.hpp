@@ -1,6 +1,9 @@
 class Wektor2D
 {
     
+    
+    
+    
     public:
 
     int populacja(){return num_wek;};
@@ -31,29 +34,34 @@ class Wektor2D
     
     ~Wektor2D()
     {
-        //--num_wek;
+        --num_wek;
         std::cout<<"Usunięto wektor o x ="<<x<<"; y = "<<y<<std::endl;
     }
+
+    Wektor2D(int wspx, int wspy)
+    {
+        ++num_wek;
+        setX(wspx);
+        setY(wspy);
+        std::cout <<"Utworzono wektor o x ="<<x<<"; y = "<<y<<std::endl;
+    }
+
     Informer cd;
 
   
-    void SetY(int wspy){y = wspy;};
-    void SetX(int wspx){x = wspx;};
-    int GetX(){return x;};
-    int GetY(){return y;};
+    void setY(int wspy){y = wspy;};
+    void setX(int wspx){x = wspx;};
+    int getX(){return x;};
+    int getY(){return y;};
 
     private:
     int x;
     int y;
     static int num_wek;
 
-      Wektor2D(int wspx, int wspy)
-    {
-    ++num_wek;
-    SetX(wspx);
-    SetY(wspy);
-    std::cout <<"Utworzono wektor o x ="<<x<<"; y = "<<y<<std::endl;
-    }
+    
+    
     
   
 };
+
