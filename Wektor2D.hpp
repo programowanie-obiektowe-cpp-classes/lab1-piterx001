@@ -7,7 +7,6 @@ class Wektor2D
 
     Wektor2D(double wspx, double wspy)
     {
-    ++num_wek;
     setX(wspx);
     setY(wspy);
     std::cout <<"Utworzono wektor o x ="<<x<<"; y = "<<y<<std::endl;
@@ -41,16 +40,10 @@ class Wektor2D
     
     ~Wektor2D()
     {
-        //--num_wek;
+        
         std::cout<<"Usunięto wektor o x ="<<x<<"; y = "<<y<<std::endl;
     }
-    //Informer cd;
-
-  /* Wektor2D operator+(Wektor2D a, Wektor2D b)
-{
     
-    return Wektor2D::kart(a.getX() + b.getX(), a.getY() + b.getY());
-}*/
 
     Wektor2D operator+(const Wektor2D& other) const
     {
@@ -71,7 +64,7 @@ class Wektor2D
     private:
     int x;
     int y;
-    static int num_wek;
+  
 
     
 };
