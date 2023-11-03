@@ -3,7 +3,7 @@ class Wektor2D
    
     public:
 
-    int populacja(){return num_wek;};
+
 
     Wektor2D(double wspx, double wspy)
     {
