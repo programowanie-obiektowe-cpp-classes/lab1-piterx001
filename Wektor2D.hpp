@@ -4,7 +4,7 @@ class Wektor2D
 
     int populacja(){return num_wek;};
 
-    Wektor2D(int wspx, int wspy)
+    Wektor2D(double wspx, double wspy)
     {
     ++num_wek;
     setX(wspx);
@@ -57,3 +57,8 @@ class Wektor2D
     static int num_wek;
 };
 
+Wektor2D operator+(Wektor2D a, Wektor2D b)
+{
+    
+    return Wektor2D::kart(a.getX() + b.getX(), a.getY() + b.getY());
+}
