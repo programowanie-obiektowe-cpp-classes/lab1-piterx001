@@ -1,7 +1,6 @@
 class Wektor2D
 {
    
-
     public:
 
     int populacja(){return num_wek;};
@@ -47,11 +46,21 @@ class Wektor2D
     }
     //Informer cd;
 
-    sum operator+(Wektor2D a, Wektor2D b)
+  /* Wektor2D operator+(Wektor2D a, Wektor2D b)
 {
     
     return Wektor2D::kart(a.getX() + b.getX(), a.getY() + b.getY());
-}
+}*/
+
+    Wektor2D operator+(const Wektor2D& other) const
+    {
+        return Wektor2D(x + other.x, y + other.y);
+    }
+
+    double operator*(const Wektor2D& other) const
+    {
+        return x * other.x + y * other.y;
+    }
 
   
     void setY(int wspy){y = wspy;};
