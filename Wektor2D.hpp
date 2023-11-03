@@ -1,12 +1,18 @@
 class Wektor2D
 {
-    
-    
-    
-    
     public:
 
     int populacja(){return num_wek;};
+
+    Wektor2D(int wspx, int wspy)
+    {
+    ++num_wek;
+    setX(wspx);
+    setY(wspy);
+    std::cout <<"Utworzono wektor o x ="<<x<<"; y = "<<y<<std::endl;
+    }
+
+    Wektor2D() {setX(0); setY(0);}
 
     static Wektor2D kart(double x, double y)
     {
@@ -34,19 +40,10 @@ class Wektor2D
     
     ~Wektor2D()
     {
-        --num_wek;
+        //--num_wek;
         std::cout<<"Usunięto wektor o x ="<<x<<"; y = "<<y<<std::endl;
     }
-
-    Wektor2D(int wspx, int wspy)
-    {
-        ++num_wek;
-        setX(wspx);
-        setY(wspy);
-        std::cout <<"Utworzono wektor o x ="<<x<<"; y = "<<y<<std::endl;
-    }
-
-    Informer cd;
+    //Informer cd;
 
   
     void setY(int wspy){y = wspy;};
@@ -58,10 +55,5 @@ class Wektor2D
     int x;
     int y;
     static int num_wek;
-
-    
-    
-    
-  
 };
 
